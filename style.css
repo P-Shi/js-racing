@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;700;900&display=swap');
+
+body {
+    color: #000;
+    font-family: "Ruda";
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+.hide {
+    display: none;
+}
+
+.game{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.car {
+    width: 50px;
+    height: 100px;
+    background: transparent url(./image/my.png) center / cover no-repeat;
+    border-radius: 10px;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 15px 25px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 15px;
+    border: 4px solid #fff;
+    box-shadow: 20px 20px 40px rgba(0,0,0,.2), 2px 2px 4px rgba(0,0,0,.2) inset;
+    transition-duration: 0.25s;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+}
+
+.btn.start {
+    background: linear-gradient(154deg, #06ff00, #0d7e0b);
+    background-size: 400% 400%;
+
+    -webkit-animation: green 10s ease infinite;
+    -moz-animation: green 10s ease infinite;
+    animation: green 10s ease infinite;
+}
+
+.btn.stop {
+    background: linear-gradient(128deg, #ff0000, #690505);
+    background-size: 400% 400%;
+
+    -webkit-animation: red 10s ease infinite;
+    -moz-animation: red 10s ease infinite;
+    -o-animation: red 10s ease infinite;
+    animation: red 10s ease infinite;
+}
+
+@-webkit-keyframes red {
+    0%{background-position:0% 22%}
+    50%{background-position:100% 79%}
+    100%{background-position:0% 22%}
+}
+@-moz-keyframes red {
+    0%{background-position:0% 22%}
+    50%{background-position:100% 79%}
+    100%{background-position:0% 22%}
+}
+@-o-keyframes red {
+    0%{background-position:0% 22%}
+    50%{background-position:100% 79%}
+    100%{background-position:0% 22%}
+}
+@keyframes red {
+    0%{background-position:0% 22%}
+    50%{background-position:100% 79%}
+    100%{background-position:0% 22%}
+}
+
+@-webkit-keyframes green {
+    0%{background-position:24% 0%}
+    50%{background-position:77% 100%}
+    100%{background-position:24% 0%}
+}
+@-o-keyframes green {
+    0%{background-position:0% 22%}
+    50%{background-position:100% 79%}
+    100%{background-position:0% 22%}
+}
+@-moz-keyframes green {
+    0%{background-position:24% 0%}
+    50%{background-position:77% 100%}
+    100%{background-position:24% 0%}
+}
+@keyframes green {
+    0%{background-position:24% 0%}
+    50%{background-position:77% 100%}
+    100%{background-position:24% 0%}
+}
