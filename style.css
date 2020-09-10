@@ -5,8 +5,6 @@ body {
     font-family: "Ruda";
     width: 100%;
     height: 100vh;
-    padding: 0;
-    margin: 0;
 }
 .hide {
     display: none;
@@ -18,13 +16,37 @@ body {
     height: 100%;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.car {
+.gameArea{
+    width: 300px;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    background: url(./image/asphalt.png) #222;
+    overflow: hidden;
+}
+
+.line{
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: #fff;
+}
+
+.car, .enemy {
     width: 50px;
     height: 100px;
     background: transparent url(./image/my.png) center / cover no-repeat;
     border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 125px;
+    z-index: 5;
 }
 
 .btn {
@@ -38,8 +60,8 @@ body {
     transition-duration: 0.25s;
     position: absolute;
     top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 50px;
+    z-index: 5;
 }
 
 .btn:hover{
