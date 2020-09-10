@@ -5,15 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeedForJSRacing</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="score"></div>
+    <div class="score">
+        <div>Счет:<div class="total">0</div></div>
+        <div class="best hide">Лучший:<div class="total">0</div></div>
+    </div>
     <div class="game">
-        <div class="start btn">СТАРТ!</div>
-        <div class="stop btn hide">СТОП!</div>
+        <div class="btnWrap">
+            <button class="level1 start btn">Уровень 1</button>
+            <button class="level2 start btn">Уровень 2</button>
+            <button class="level3 start btn">Уровень 3</button>
+        </div>
         <div class="roadLeft"></div>
         <div class="gameArea"></div>
         <div class="roadRight"></div>
