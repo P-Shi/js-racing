@@ -17,6 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    background: url(./image/road.jpg) repeat-y center 0;
 }
 
 .gameArea{
@@ -24,8 +25,23 @@ body {
     height: 100%;
     position: relative;
     margin: auto;
-    background: url(./image/asphalt.png) #222;
     overflow: hidden;
+}
+
+.roadLeft {
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    margin-left: -250px;
+    height: 100%;
+}
+
+.roadRight {
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    margin-left: 150px;
+    height: 100%;
 }
 
 .line{

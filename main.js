@@ -1,7 +1,8 @@
 const startBtn = document.querySelector('.start'),
     score = document.querySelector('.score'),
     stopBtn = document.querySelector('.stop'),
-    gameArea = document.querySelector('.gameArea'),
+    gameArea = document.querySelector('.gameArea')
+    game = document.querySelector('.game'),
     car = document.createElement('div');
 
 car.classList.add('car');
@@ -41,7 +42,7 @@ function startGame(event) {
         gameArea.appendChild(line);
     }
 
-    stopBtn.classList.remove('hide');
+   // stopBtn.classList.remove('hide');
     car.classList.remove('hide');
 
     for ( let i = 0; i <= getQuantityElements(100 * setting.traffic); i++) {
@@ -59,14 +60,15 @@ function startGame(event) {
     setting.x = car.offsetLeft;
     setting.y = car.offsetTop;
 
-    setting.bgY = 0;
+
+    setting.roadBgY = 0;
 
     window.setInterval(function () {
-        console.log(setting.bgY, gameArea.style.backgroundPositionY);
-        setting.bgY += (setting.speed);
-        gameArea.style.backgroundPositionY = setting.bgY + 'px';
-        if (setting.bgY > gameArea.clientHeight) {
-            setting.bgY = 0;
+        console.log(setting.roadBgY, game.style.backgroundPositionY);
+        setting.roadBgY += (setting.speed);
+        game.style.backgroundPositionY = setting.roadBgY + 'px';
+        if (setting.roadBgY > gameArea.clientHeight) {
+            setting.roadBgY = 0;
         }
     }, 17);
 
@@ -79,7 +81,7 @@ function playGame(){
 
     if (setting.start === true) {
 
-        if (keys.ArrowLeft && setting.x > (car.offsetWidth)) {
+        if (keys.ArrowLeft && setting.x > 0) {
             setting.x -= setting.speed;
         }
         if (keys.ArrowRight && (setting.x + (car.offsetWidth)) < gameArea.offsetWidth) {
@@ -101,7 +103,7 @@ function playGame(){
 
 function stopGame(event) {
     startBtn.classList.remove('hide');
-    stopBtn.classList.add('hide');
+   // stopBtn.classList.add('hide');
     car.classList.add('hide');
     setting.start = false;
     requestAnimationFrame(playGame);
